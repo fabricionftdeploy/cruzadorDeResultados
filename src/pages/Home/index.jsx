@@ -17,6 +17,7 @@ export default function Home(){
 
   const {
     calcularOdds, setCalcularOdds, preencherOdd, odds,
+    exibirFacilitadores, setExibirFacilitadores,
     quantidadeDeJogos, setQuantidadeDeJogos,
     considerarEmpates, setConsiderarEmpates,
     times, estaoPreenchidos, preencherTime, limparTimes,
@@ -183,6 +184,9 @@ export default function Home(){
         possibilidades={possibilidades}
         calcularOdds={calcularOdds}
         copiarPossibiilidades={copiarPossibiilidades}
+        times={times}
+        exibirFacilitadores={exibirFacilitadores}
+        setExibirFacilitadores={setExibirFacilitadores}
       />
     </Container>
   )

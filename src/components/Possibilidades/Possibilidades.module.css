@@ -3,31 +3,74 @@
   padding: 30px 0;
   margin-top: 30px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-color: #efedf8;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.066), 0 8px 16px rgba(0, 0, 0, 0.066);
+  position: relative;
 }
 
-.possibilidades h1{
-  margin: 0 0 20px 0;
-  text-transform: uppercase;
-  font-size: 18px;
+.quantidadePossibilidades{
+  position: absolute;
+  right: 10px;
+  top: -10px;
   font-weight: bold;
+  font-size: 18.5px;
 }
 
-.possibilidades p{
-  margin: 0 0 15px 0;
-  width: 90%;
-  text-align: left;
-  color: rgb(87, 87, 87);
-  font-size: 16px;
+.possibilidade{
+  width: 87.5%;
+  padding: 7.5px 10px 7.5px 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border: 2px solid transparent;
 }
 
-.par{
-  background-color: #dfd9f9;
+.possibilidade:hover{
+  cursor: pointer;
+  border: 2px solid #8876ff;
+  background-color: #e7e2ff;
+}
+
+.resultados{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.resultados p{
+  margin: 0;
+  width: fit-content;
+}
+
+
+.opcoes{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 7.5px 0 10px 0;
+}
+
+.opcoes p{
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 7.5px 0;
+  font-size: 12px;
+}
+
+.opcao{
+  width: 29.5%;
+  height: 40px;
+  border-radius: 7.5px;
+  color: #fff;
+  border: 2px solid #8876ff;
+}
+
+.resultadoCorreto{
+  background-color: #8876ff;
 }
 
 .btnCopiarTexto{
@@ -35,7 +78,6 @@
   margin: 20px 0 0 0;
 }
 
-
 @media screen and (max-width: 450px) {
-  .posibilidades{width: 100%;}
+  .possibilidades{width: 100%;}
 }

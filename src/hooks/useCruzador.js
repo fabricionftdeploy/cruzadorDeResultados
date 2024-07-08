@@ -24,18 +24,33 @@ const useCruzador = () => {
   //Possibilidades
   const [possibilidades, setPossibilidades] = useState([]);
   const [estaoPreenchidos, setEstaoPreenchidos] = useState(false);
-  const [considerarEmpates, setConsiderarEmpates] = useState(true);
+
+  //Escolher
   const [quantidadeDeJogos, setQuantidadeDeJogos] = useState(3);
+  const [considerarEmpates, setConsiderarEmpates] = useState(true);
   const [calcularOdds, setCalcularOdds] = useState(false);
+  const [exibirFacilitadores, setExibirFacilitadores] = useState(false);
 
   const gerarPossibilidades = () => {
     new Audio(soundButton).play();
     setEstaoPreenchidos(true);
     setPossibilidades([]);
 
-    let timesA = [[times.time1, odds.odd1], [times.time2, odds.odd3], ["Empate-".concat(times.time1), odds.odd2]];
-    let timesB = [[times.time3, odds.odd4], [times.time4, odds.odd6], ["Empate-".concat(times.time3), odds.odd5]];
-    let timesC = [[times.time5, odds.odd7], [times.time6, odds.odd9], ["Empate-".concat(times.time5), odds.odd8]];
+    let timesA = [
+      [times.time1.concat(".casa"), odds.odd1],
+      [times.time2.concat(".fora"), odds.odd3],
+      ["Empate-".concat(times.time1).concat(".empate"), odds.odd2]
+    ];
+    let timesB = [
+      [times.time3.concat(".casa"), odds.odd4], 
+      [times.time4.concat(".fora"), odds.odd6], 
+      ["Empate-".concat(times.time3).concat(".empate"), odds.odd5]
+    ];
+    let timesC = [
+      [times.time5.concat(".casa"), odds.odd7], 
+      [times.time6.concat(".fora"), odds.odd9], 
+      ["Empate-".concat(times.time5).concat(".empate"), odds.odd8]
+    ];
     
     if(!considerarEmpates){
       timesA.pop();
@@ -97,6 +112,7 @@ const useCruzador = () => {
 
   return{
     calcularOdds, setCalcularOdds, preencherOdd, odds,
+    exibirFacilitadores, setExibirFacilitadores,
     quantidadeDeJogos, setQuantidadeDeJogos,
     considerarEmpates, setConsiderarEmpates,
     times, estaoPreenchidos, preencherTime, limparTimes,
