@@ -1,0 +1,27 @@
+.textoSeletor{
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.seletorQuantidadeDeJogos{
+  width: 90px;
+  background-color: #8876ff;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+}
+
+.btnPossibilidades{
+  width: 400px;
+}
+
+.desativado{
+  filter: brightness(80%);
+  cursor: initial;
+}
+
+@media screen and (max-width: 450px) {
+  .btnPossibilidades{width: 100%;}
+}

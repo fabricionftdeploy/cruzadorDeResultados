@@ -1,0 +1,16 @@
+.linha{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.linha input{
+  width: 30%;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.semEmpate input{
+  width: 48%;
+}
