@@ -95,7 +95,14 @@ const useCruzador = () => {
     let possibilidadesPorExtenso = "";
     
     possibilidades.map((posibilidade, index) => {
-      possibilidadesPorExtenso += (index+1)+" - "+posibilidade.resultado+"\n";
+      possibilidadesPorExtenso += (index+1)+" - ";
+
+      let timesDaPossibilidade = posibilidade.resultado.split("/");
+      timesDaPossibilidade.map((time, indexTime) => {
+        possibilidadesPorExtenso += time.split(".")[0];
+        if(timesDaPossibilidade.length !== (indexTime+1))possibilidadesPorExtenso += "/";
+      })
+      possibilidadesPorExtenso +="\n";
     })
 
     navigator.clipboard.writeText(possibilidadesPorExtenso)
